@@ -1,0 +1,16 @@
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+div[cdkDrag] {
+  padding: 10px;
+  background-color: #e0e0e0;
+  border: 1px solid #bdbdbd;
+  cursor: grab;
+}
+
+div[cdkDragPreview] {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

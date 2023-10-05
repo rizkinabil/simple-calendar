@@ -1,18 +1,22 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { AppointmentFormComponent } from './appointment-form/appointment-form.component';
+import { AppointmentService } from './appointment.service';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, CalendarComponent, AppointmentFormComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    ReactiveFormsModule,
+    DragDropModule,
+    AppRoutingModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AppointmentService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

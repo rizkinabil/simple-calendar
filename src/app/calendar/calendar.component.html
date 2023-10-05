@@ -1,0 +1,4 @@
+<div *ngFor="let appointment of appointments$ | async" cdkDrag>
+  {{ appointment.title }} - {{ appointment.date }}
+  <button (click)="deleteAppointment(appointment)">Delete</button>
+</div>
